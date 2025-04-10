@@ -18,5 +18,10 @@ This repository showcases a collection of academic and industry data science pro
 
 Feel free to reach out or connect:
 - www.linkedin.com/in/george-paul-9a08511b0
+- +44 7841 402737
 
 Thanks for visiting!
+
+## Licence
+
+MIT
