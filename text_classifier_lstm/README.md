@@ -1,7 +1,7 @@
 # IMDB Sentiment Analysis with LSTM
 
 **Description:**  
-This repository implements a binary sentiment classifier using an LSTM network on the IMDB movie reviews dataset. It leverages PyTorch and TorchText for data handling, model creation, training, and evaluation.
+This folder contains implementation of a binary sentiment classifier using an LSTM network on the IMDB movie reviews dataset. It uses PyTorch and TorchText for data handling, model creation, training, and evaluation.
 
 ## Table of Contents
 - [Overview](#overview)
