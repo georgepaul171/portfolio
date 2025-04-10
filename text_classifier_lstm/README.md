@@ -1,113 +1,106 @@
-IMDB Sentiment Analysis with LSTM
-This repository implements a binary sentiment classifier using an LSTM network on the IMDB movie reviews dataset. It leverages PyTorch and TorchText for data handling, model construction, training, and evaluation.
+# IMDB Sentiment Analysis with LSTM
 
-Overview
-The project performs the following steps:
+**Description:**  
+This repository implements a binary sentiment classifier using an LSTM network on the IMDB movie reviews dataset. It leverages PyTorch and TorchText for data handling, model creation, training, and evaluation.
 
-Data Loading and Preprocessing:
-Downloads and processes the IMDB dataset using TorchText. Reviews are tokenized using the basic_english tokenizer, and a vocabulary is built from the tokens.
+## Table of Contents
+- [Overview](#overview)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+- [Contributing](#contributing)
 
-Model Architecture:
-Implements an LSTM-based classifier that processes the tokenized input sequences and outputs a probability prediction (0.0 for negative and 1.0 for positive) using a Sigmoid activation.
+## Overview
 
-Training and Evaluation:
-Includes training and evaluation loops using Binary Cross Entropy loss, with accuracy computed per epoch.
+This project performs the following steps:
 
-Requirements
-The project requires Python 3.10 and the following packages:
+- **Data Loading and Preprocessing:**  
+  - Downloads the IMDB dataset (if not already cached) using TorchText.
+  - Tokenizes reviews using the `basic_english` tokenizer.
+  - Builds a vocabulary from the tokenized data.
+  - Collates data into padded batches.
 
-torch==2.2.0
+- **LSTM Model Architecture:**  
+  - Uses a word embedding layer to convert tokens into dense vectors.
+  - Processes the sequences through an LSTM layer.
+  - Outputs a single probability using a fully-connected layer followed by a Sigmoid activation.
 
-torchtext==0.17.0
+- **Training and Evaluation:**  
+  - Trains the model using Binary Cross Entropy (BCE) loss.
+  - Evaluates performance per epoch based on loss and accuracy metrics.
 
-matplotlib==3.9.0
+## Requirements
 
-numpy==1.26.4
+This project requires **Python 3.10** along with the following packages:
 
-portalocker>=2.0.0 (needed for caching in torchdata)
+- **torch==2.2.0**
+- **torchtext==0.17.0**
+- **matplotlib==3.9.0**
+- **numpy==1.26.4**
+- **portalocker>=2.0.0** (Required by `torchdata` for caching)
 
-These dependencies are listed in the requirements.txt file.
+All dependencies are listed in the [requirements.txt](./requirements.txt) file.
 
-Setup
-Follow these steps to set up your environment:
+## Setup
 
-Clone the Repository:
+Follow these steps to set up the project locally:
 
-bash
-Copy
-git clone <repository_url>
-cd text_classifier_lstm
-Create and Activate a Virtual Environment:
 
-bash
-Copy
+1. **Clone the Repository:**
+
+   ```bash
+   git clone <YOUR_REPO_URL>
+   cd text_classifier_lstm
+
+
+2. **Create and Activate a Virtual Environment:**
+
 python3.10 -m venv venv
 source venv/bin/activate
-Install the Dependencies:
 
-bash
-Copy
+3. **Install Dependencies:**
+
 pip install --upgrade pip
 pip install -r requirements.txt
-Usage
-Running the Training
-Execute the main script:
 
-bash
-Copy
+
+4. **Usage**
+To run the training script, execute:
+
 python main.py
-First-Time Run:
-An active internet connection is required to download the IMDB dataset. After the initial download, the data is cached locally so subsequent runs can work offline.
 
-Training Output:
-You will see logs for the sample from the dataset, followed by epoch-wise training and validation loss/accuracy. Debug prints (if not removed) will show the converted labels per batch.
+  **First-Time Run:**
+You will need an active internet connection as the IMDB dataset will be downloaded and cached locally.
 
-Expected Runtime
-On a CPU:
-On-the-fly tokenization and data loading can be a bottleneck. Depending on your machine, each epoch might take 1–2 minutes.
+  **Training Output:**
+The console will display epoch-wise training and validation loss/accuracy. Debug print statements (such as those for displaying converted labels) may appear for each batch—these can be removed once verification is complete.
 
-On a GPU:
-Model computation should be faster; however, data loading might remain the same unless further optimized (e.g., using multiple workers).
 
-Note: Once you verify that the conversion of labels is correct (showing only 0.0 and 1.0), consider removing or commenting out the debug print statements to clean up the output and potentially speed up training.
-
-Project Structure
+**Project Structure**
 main.py:
-The entry point; sets up device configuration, loads data, initializes the model, and kicks off training.
+Entry point; orchestrates data loading, model training, and evaluation.
 
 data.py:
-Handles dataset loading, tokenization, vocabulary building, and defines the collate_batch function.
+Handles dataset loading, tokenization, vocabulary construction, and batch collation.
 
 model.py:
-Contains the definition of the LSTM-based classification model.
+Defines the LSTM-based classifier model.
 
 train.py:
-Implements the training loop.
+Contains the training loop.
 
 utils.py:
-Provides the evaluation function.
+Provides functions for model evaluation.
 
 requirements.txt:
-Lists all required packages.
+Lists all project dependencies.
 
 README.md:
 This file.
 
-Troubleshooting
-Long Training Times:
-If training is slow:
 
-Check if you are running on a CPU. GPU acceleration significantly reduces training times.
-
-Consider increasing the num_workers parameter in the DataLoader to speed up data loading.
-
-Disable or remove debug print statements once you verify label conversion.
-
-Data Download:
-An internet connection is required during the first run to download the IMDB dataset. Subsequent runs use the locally cached version.
-
-Label Conversion:
-Verify the label conversion in data.py. If issues occur with the target values for BCELoss, ensure that the labels are correctly remapped to either 0.0 or 1.0.
-
-License
-[Specify License Here, e.g., MIT License] 
+**License**
+MIT
