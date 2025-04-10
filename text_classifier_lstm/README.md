@@ -67,7 +67,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 
-4. **Usage**
+## Usage
 To run the training script, execute:
 
 python main.py
@@ -79,7 +79,7 @@ You will need an active internet connection as the IMDB dataset will be download
 The console will display epoch-wise training and validation loss/accuracy. Debug print statements (such as those for displaying converted labels) may appear for each batch—these can be removed once verification is complete.
 
 
-**Project Structure**
+## Project Structure
 main.py:
 Entry point; orchestrates data loading, model training, and evaluation.
 
@@ -102,5 +102,5 @@ README.md:
 This file.
 
 
-**License**
+## Licence
 MIT
