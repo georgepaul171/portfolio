@@ -9,9 +9,7 @@ This repository implements a binary sentiment classifier using an LSTM network o
 - [Setup](#setup)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [Troubleshooting](#troubleshooting)
 - [License](#license)
-- [Contributing](#contributing)
 
 ## Overview
 
@@ -48,7 +46,6 @@ All dependencies are listed in the [requirements.txt](./requirements.txt) file.
 
 Follow these steps to set up the project locally:
 
-
 1. **Clone the Repository:**
 
    ```bash
@@ -80,6 +77,7 @@ The console will display epoch-wise training and validation loss/accuracy. Debug
 
 
 ## Project Structure
+
 main.py:
 Entry point; orchestrates data loading, model training, and evaluation.
 
@@ -103,4 +101,5 @@ This file.
 
 
 ## Licence
+
 MIT
