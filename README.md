@@ -8,10 +8,10 @@ This portfolio highlights selected projects that demonstrate my ability to deliv
 
 ## Projects
 
-- **Energy Use Prediction in Buildings** — Bayesian ML for carbon-conscious decisions.
-- **GreenPlace Index Tool** — Built a metric to evaluate building greenness.
-- **Boxing AI** — Reinforcement learning agent for OpenAI Gym Boxing environment.
+- **Data Analysis** — Bayesian ML insights for carbon-conscious decisions, and analysis of education data across London boroughs.
+- **Reinforcement Learning** — Reinforcement learning agent for OpenAI Gym Boxing environment.
 - **Customer Churn Prediction Pipeline** - Built an end-to-end machine learning pipeline for predicting customer attrition using classification models and feature importance analysis.
+- **Text Classifier LSTM** - Developed an LSTM-based neural network to classify text data, incorporating tokenization, padding, and embedding layers for effective sentiment or topic classification.
 
 ---
 
