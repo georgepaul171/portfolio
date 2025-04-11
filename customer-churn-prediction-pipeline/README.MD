@@ -1,4 +1,3 @@
-"""
 # Customer Churn Prediction Pipeline
 
 This project implements an end-to-end machine learning pipeline to predict customer churn using the IBM Telco dataset. It includes multiple models, explainability via SHAP, model comparison, and a Streamlit app.
@@ -18,4 +17,3 @@ streamlit run app/app.py
 
 ## Author
 George Paul
-"""
