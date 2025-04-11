@@ -1,6 +1,6 @@
 # George Paul 
 
-Hi, I’m George — a passionate data scientist with a strong academic background and hands-on industry experience. I hold an MSc in Data Science from the University of Bath and a BSc in Mathematics from the University of Manchester. My work blends statistical thinking with creative problem-solving to build impactful models in real-world contexts.
+I am a data scientist with a strong academic background and hands-on industry experience. I hold an MSc in Data Science from the University of Bath and a BSc in Mathematics from the University of Manchester. My work combines statistical thinking with creative problem-solving to build impactful models in real-world contexts.
 
 This portfolio highlights selected projects that demonstrate my ability to deliver results across a range of technical challenges — from Bayesian modelling and reinforcement learning to metric design and data engineering.
 
