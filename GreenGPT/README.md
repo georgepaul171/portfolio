@@ -1,17 +1,17 @@
 # GreenGPT: A Generative AI Tool for Sustainable Retrofit Recommendations
 
-GreenGPT is a portfolio project that uses Generative AI to produce tailored retrofit recommendations for office buildings, based on structured inputs such as age, location, heating system, and lighting type. It aims to support decarbonisation strategies by using GPT-4's language capabilities within a structured pipeline.
+GreenGPT is a portfolio project that uses Generative AI to produce tailored retrofit recommendations for buildings, based on structured inputs such as age, location, heating system, and lighting type. It supsport 'green' strategies by using GPT-4's language capabilities within a structured pipeline.
 
 ---
 
 ## Project Overview
 
-**Goal:** Provide actionable retrofit suggestions to improve energy efficiency and reduce carbon emissions for commercial office spaces.
+**Goal:** Provide retrofit suggestions to improve energy efficiency and reduce carbon emissions for commercial spaces.
 
 **Approach:**
 - Input building characteristics (e.g., age, number of floors, energy systems)
-- Use GPT-4 to return customized recommendations
-- Optionally visualize results in a Streamlit interface
+- Use GPT-4 to return customised recommendations
+- Optionally visualise results in a Streamlit interface
 
 ---
 
@@ -19,7 +19,7 @@ GreenGPT is a portfolio project that uses Generative AI to produce tailored retr
 
 ```
 ├── data/
-│   ├── raw/               # Raw CoStar data or retrofit case PDFs
+│   ├── raw/               # Raw data or retrofit case PDFs
 │   └── processed/         # Cleaned and structured data
 ├── prompts/               # Prompt templates for GPT-4
 ├── app/
